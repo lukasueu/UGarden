@@ -102,12 +102,9 @@ public class PlantMainSwing {
 
     public static void main(String[] args)
     {
-        Runnable(){
-            javax.swing.SwingUtilities.invokeLater(new
-    
-            public void run() {
-                PlantMainSwing uGardenApp = new
-                PlantMainSwing();
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    PlantMainSwing uGardenApp = new PlantMainSwing();
             }
         });
     }

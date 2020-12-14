@@ -19,7 +19,8 @@ How to compile and run (with gui driver):
 
 class Plant {
 
-    int statusTumbuh;// 0-4 int jumlahAir;
+    int statusTumbuh;// 0-4 
+    int jumlahAir;
     int jumlahPupuk;
 
     public Plant() {
@@ -39,7 +40,9 @@ class Plant {
     }
 
     public void cekKondisiTumbuh() {
-        // cek kecukupan air dan pupuk if(jumlahAir >=3 && jumlahPupuk >=1)
+        
+        // cek kecukupan air dan pupuk 
+        if(jumlahAir >=3 && jumlahPupuk >=1)
         {
             tumbuh();
         }
@@ -62,20 +65,18 @@ class Plant {
     public String getStatusTumbuhText() {
         switch (statusTumbuh) {
             case 0:
+                return "Benih";
 
             case 1:
+                return "Tunas";
 
             case 2:
+                return "Tanaman Kecil";
 
             case 3:
+                return "Tanaman Dewasa";
 
         }
-
-        return "Benih";
-        return "Tunas";
-        return "Tanaman Kecil";
-        return "Tanaman Dewasa";
-
         return "Berbunga";
     }
 
@@ -87,32 +88,25 @@ class Plant {
         String tImagePath = "img/seed.png";
         switch (statusTumbuh) {
             case 0:
-
-            case 1:
-
-            case 2:
-
-            case 3:
-
                 tImagePath = "img/seed.png";
                 break;
 
+            case 1:
                 tImagePath = "img/sprout.png";
                 break;
 
+            case 2:
                 tImagePath = "img/small.png";
                 break;
 
+            case 3:
                 tImagePath = "img/big.png";
                 break;
-
             case 4:
+                tImagePath = "img/blossom.png";
+                break;
 
         }
-
-        tImagePath = "img/blossom.png";
-        break;
-
         return tImagePath;
     }
 
